@@ -4,23 +4,41 @@ This repository contains all conference posters created by our research group (A
 
 ## Repository Structure
 
-Posters are organized by year and conference:
+All poster files are stored flat inside `posters/` using a consistent naming pattern:
 
 ```
 posters/
-└── <year>/
-    └── <conference-name>/
-        ├── poster.pdf          # Final poster (PDF)
-        ├── poster.<ext>        # Source file (e.g., .pptx, .tex, .ai)
-        └── README.md           # Conference details and abstract
+├── YYYY_ConferenceAbbr_poster.pdf      # Final poster (PDF)
+├── YYYY_ConferenceAbbr_poster.<ext>    # Source file (e.g., .pptx, .tex, .ai)
+└── YYYY_ConferenceAbbr_abstract.md     # Conference details and abstract
+```
+
+### Naming Convention
+
+`YYYY_ConferenceAbbr_<type>.<ext>`
+
+| Part              | Description                                           | Example         |
+|-------------------|-------------------------------------------------------|-----------------|
+| `YYYY`            | Four-digit year of the conference                     | `2024`          |
+| `ConferenceAbbr`  | Short, recognizable abbreviation of the conference    | `SciPy`, `EAGE` |
+| `<type>`          | File role: `poster` (PDF/source) or `abstract` (notes)| `poster`       |
+| `<ext>`           | File extension matching the format                    | `pdf`, `pptx`   |
+
+**Examples:**
+```
+2024_SciPy_poster.pdf
+2024_SciPy_poster.pptx
+2024_SciPy_abstract.md
+2025_EAGE_poster.pdf
+2025_EAGE_poster.tex
+2025_EAGE_abstract.md
 ```
 
 ## Adding a New Poster
 
-1. Create a new directory under `posters/<year>/<conference-name>/`.
-2. Add the final poster as a PDF named `poster.pdf`.
-3. Add the source file (PowerPoint, LaTeX, Illustrator, etc.).
-4. Add a `README.md` with the following information:
+1. Place all files directly in `posters/` — no sub-folders.
+2. Name each file following the convention above.
+3. The `abstract.md` should contain:
    - Conference name and date
    - Poster title and authors
    - Short abstract

@@ -1,19 +1,30 @@
 # Posters
 
-This directory contains all conference posters organized by year and conference name.
+This directory contains all conference posters. Files are stored flat — no sub-folders — using a smart naming convention so every poster is easy to locate at a glance.
 
-## Directory Layout
+## Naming Convention
+
+`YYYY_ConferenceAbbr_<type>.<ext>`
+
+| Part              | Description                                            | Example         |
+|-------------------|--------------------------------------------------------|-----------------|
+| `YYYY`            | Four-digit year of the conference                      | `2024`          |
+| `ConferenceAbbr`  | Short, recognizable abbreviation of the conference     | `SciPy`, `EAGE` |
+| `<type>`          | File role: `poster` (PDF/source) or `abstract` (notes) | `poster`        |
+| `<ext>`           | File extension matching the format                     | `pdf`, `pptx`   |
+
+## File Layout
 
 ```
 posters/
-└── <year>/
-    └── <conference-name>/
-        ├── poster.pdf          # Final poster (PDF)
-        ├── poster.<ext>        # Source file (e.g., .pptx, .tex, .ai)
-        └── README.md           # Conference details and abstract
+├── YYYY_ConferenceAbbr_poster.pdf      # Final poster (PDF)
+├── YYYY_ConferenceAbbr_poster.<ext>    # Source file (e.g., .pptx, .tex, .ai)
+└── YYYY_ConferenceAbbr_abstract.md     # Conference details and abstract
 ```
 
-## Example `README.md` for a Poster
+## Example `abstract.md`
+
+Name the file `YYYY_ConferenceAbbr_abstract.md`, e.g. `2024_SciPy_abstract.md`:
 
 ```markdown
 # <Poster Title>
